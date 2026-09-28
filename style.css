@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f3f6f4;
+  color: #1b2b24;
+  font:
+    16px Arial,
+    sans-serif;
+}
+header {
+  background: #12352a;
+  color: white;
+  padding: 20px max(5%, calc((100% - 1050px) / 2));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header b {
+  font-size: 27px;
+}
+header span,
+.hero span {
+  color: #b8eb62;
+}
+nav {
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+main {
+  max-width: 1050px;
+  margin: auto;
+  padding: 25px 20px;
+}
+.hero {
+  background: #dcefe4;
+  border-radius: 22px;
+  padding: 45px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.hero h1 {
+  font-size: clamp(42px, 6vw, 65px);
+  margin: 12px 0;
+}
+.hero span {
+  color: #287957;
+}
+.hero small {
+  letter-spacing: 2px;
+  color: #477760;
+}
+.art {
+  background: #173e30;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  min-height: 180px;
+  font-size: 95px;
+}
+.panel {
+  background: white;
+  border: 1px solid #e1e9e3;
+  border-radius: 17px;
+  padding: 25px;
+  margin: 22px 0;
+}
+.panel h2 {
+  margin-top: 0;
+}
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 13px 0;
+  color: #46574e;
+}
+input,
+select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 7px;
+  border: 1px solid #d4ded7;
+  border-radius: 9px;
+  background: #fbfcfb;
+  font: inherit;
+}
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+button {
+  background: #b8eb62;
+  border: 0;
+  border-radius: 9px;
+  padding: 12px 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.secondary {
+  background: #eaf2ec;
+  color: #214b39;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+  margin-top: 17px;
+}
+.item {
+  border: 1px solid #e0e9e3;
+  border-radius: 12px;
+  padding: 15px;
+}
+.item p {
+  font-size: 14px;
+  color: #63736a;
+  line-height: 1.5;
+}
+.item select {
+  font-size: 13px;
+}
+#msg {
+  color: #27764e;
+  font-weight: bold;
+}
+footer {
+  text-align: center;
+  color: #7b8981;
+  padding: 25px;
+}
+@media (max-width: 620px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+  .art {
+    min-height: 120px;
+    font-size: 65px;
+  }
+  .two {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    gap: 10px;
+  }
+  nav a {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TriGo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <b>Tri<span>Go</span></b>
+      <nav>
+        <a href="#book">Book</a><a href="#shared">Shared routes</a
+        ><a href="#track">Bookings</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <small>COMMUNITY TRICYCLE RIDES</small>
+          <h1>Your route.<br /><span>Your ride.</span></h1>
+          <p>Book a ride and check tricycles already heading your way.</p>
+        </div>
+        <div class="art">🛺</div>
+      </section>
+      <section id="book" class="panel">
+        <h2>Book a tricycle</h2>
+        <form id="form">
+          <label
+            >Name<input name="name" required placeholder="Passenger name"
+          /></label>
+          <div class="two">
+            <label>Pickup<select name="pickup" required></select></label
+            ><label
+              >Destination<select name="destination" required></select
+            ></label>
+          </div>
+          <label
+            >Passengers<select name="passengers">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select></label
+          ><button>Request ride</button>
+          <p id="msg"></p>
+        </form>
+      </section>
+      <section id="shared" class="panel">
+        <h2>Shared route check</h2>
+        <div class="two">
+          <label>Pickup<select id="p"></select></label
+          ><label>Destination<select id="d"></select></label>
+        </div>
+        <button id="find" class="secondary">Find tricycles</button>
+        <div id="routes" class="cards"></div>
+      </section>
+      <section id="track" class="panel">
+        <h2>Booking tracker</h2>
+        <button id="refresh" class="secondary">Refresh</button>
+        <div id="bookings" class="cards"></div>
+      </section>
+      <footer>TriGo • Full-stack student prototype</footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
